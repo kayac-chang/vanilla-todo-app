@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="fixed w-screen h-52">
+        <img src="https://picsum.photos/seed/picsum/300" alt="background image" />
+
+        <div class="absolute top-0 gradient w-full h-full"></div>
+    </div>
+
+    <div class="px-6 relative flex flex-col h-screen">
+        <header class="flex justify-between items-center py-12">
+            <div class="w-28">
+                <object type="image/svg+xml" data="assets/todo.svg" alt="todo icon"></object>
+            </div>
+
+            <div class="w-5">
+                <object type="image/svg+xml" data="assets/moon.svg" alt="moon icon"></object>
+            </div>
+        </header>
+
+        <main class="space-y-4 text-xs flex-1">
+            <div class="bg-white rounded-md p-4 shadow-lg flex">
+                <input class="flex-1" type="text" placeholder="Create a new todo..." id="input" />
+
+                <button id="confirm" class="w-5 h-5 gradient rounded-full flex justify-center items-center">
+                    <object class="w-3" type="image/svg+xml" data="assets/check.svg" alt="check icon"></object>
+                </button>
+            </div>
+
+            <div class="bg-white rounded-md shadow-lg divide-y">
+                <ul class="divide-y" id="list">
+                    <li>
+                        <div class="p-4 flex items-center space-x-2">
+                            <button class="w-5 h-5 gradient rounded-full flex justify-center items-center">
+                                <object class="w-3" type="image/svg+xml" data="assets/check.svg"
+                                    alt="check icon"></object>
+                            </button>
+
+                            <span class="flex-1">Complete online JavaScript course</span>
+
+                            <button class="w-5 h-5">
+                                <object class="w-3" type="image/svg+xml" data="assets/x.svg" alt="x icon"></object>
+                            </button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="p-4 flex items-center space-x-2">
+                            <button class="w-5 h-5 border rounded-full flex justify-center items-center">
+                            </button>
+
+                            <span class="flex-1">Jog around the park 3x</span>
+
+                            <button class="w-5 h-5">
+                                <object class="w-3" type="image/svg+xml" data="assets/x.svg" alt="x icon"></object>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+
+                <footer class="p-4 text-gray-400 flex space-x-1">
+                    <span class="w-full">5 items left</span>
+
+                    <button>Clear</button>
+                    <button>Completed</button>
+                </footer>
+            </div>
+
+            <nav class="bg-white rounded-md shadow-lg flex justify-center text-gray-400">
+                <a class="p-4" href="#">All</a>
+                <a class="p-4" href="#">Active</a>
+                <a class="p-4" href="#">Completed</a>
+            </nav>
+        </main>
+
+        <footer class="h-24 flex justify-center">
+            <span class="text-gray-500 text-sm font-light">Drag and drop to reorder list</span>
+        </footer>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

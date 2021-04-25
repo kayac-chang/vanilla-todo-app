@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap");
+
+:root {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+img,
+object {
+  width: 100%;
+  max-height: 100%;
+}
+object {
+  pointer-events: none;
+}
+
+.gradient {
+  --opacity: 0.5;
+  opacity: var(--opacity);
+
+  --gradient-from: #ac2deb;
+  --gradient-to: #5596ff;
+  --gradient-stops: var(--gradient-from), var(--gradient-to);
+  background-image: linear-gradient(to right, var(--gradient-stops));
+}
